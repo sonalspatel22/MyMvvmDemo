@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.dashboard.view.DashboardFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/fragmentDashboardSearchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:drawableStart="@drawable/ic_search_grey"
+            android:background="@drawable/bg_looking_for_search_box"
+            android:gravity="center"
+            android:paddingStart="5dp"
+            android:textSize="13sp"
+            android:textAlignment="viewStart"
+            android:fontFamily="sans-serif"
+            android:hint="@string/search_by_username_or_mobile_no"
+            tools:ignore="RtlCompat,RtlSymmetry" />
+
+        <Spinner
+            android:id="@+id/fragmentDashboardDate"
+            style="@style/SpinnerTheme"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentDashboardSearchEditText" />
+
+        <Spinner
+            android:id="@+id/fragmentDashboardShow"
+            style="@style/SpinnerTheme"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentDashboardDate" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragmentDashboardRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentDashboardShow" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

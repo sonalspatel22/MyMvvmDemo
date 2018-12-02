@@ -4,10 +4,11 @@ import android.app.Application
 import android.content.Context
 import dagger.Module
 import dagger.Provides
+import mvvmdemo.com.mvvmdemo.AppConstants
 import javax.inject.Singleton
 
 @Module
-class AppModule(private val app: Application) {
+class AppModule(private val app: Application,private val isDebug:Boolean) {
     @Provides
     fun provideApplication(): Application {
         return app
@@ -19,4 +20,15 @@ class AppModule(private val app: Application) {
         return application
     }
 
+    @Provides
+    @Singleton
+    fun provideIsDebug(): Boolean {
+        return isDebug
+    }
+
+    @Provides
+    @PreferenceInfo
+    fun providePreferenceName(): String {
+        return AppConstants.PREF_NAME
+    }
 }

@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">MvvmDemo</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="login">login</string>
+    <string name="forgetPassword">forgetpassword</string>
+    <string name="matches">Match</string>
+    <string name="tabItemOne">One</string>
+    <string name="msg_loading">Loading..</string>
+    <string name="netConnectionError">Network Connection Error</string>
+    <string name="settings">Settings</string>
 </resources>

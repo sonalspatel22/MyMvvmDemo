@@ -3,4 +3,9 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
+    <color name="grey">#c7bfbf</color>
+    <color name="bgSearchView">#70b7b7b7</color>
+    <color name="bgTabLayout">#e6e4e4</color>
 </resources>
